@@ -1,0 +1,98 @@
+//====================================================================================================
+.footer {
+  background-color: #f7f7f7;
+  padding: rem(100) 0;
+  @media (max-width: 1100px) {
+    padding: rem(50) 0;
+  }
+  @media (max-width: 990px) {
+    padding: rem(50) 0 rem(50) rem(50);
+    justify-content: flex-start;
+  }
+  @media (max-width: 600px) {
+    padding: rem(30) 0;
+  }
+  &__container {
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: rem(35);
+    line-height: math.div(45, 35);
+    color: #5d4ed1;
+    @media (max-width: 600px) {
+      text-align: center;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    @media (max-width: 1100px) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: 600px) {
+      text-align: center;
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    flex: 0 1 33.333%;
+  }
+
+  &__address {
+    font-weight: 400;
+    line-height: math.div(26, 20);
+    color: #bebebe;
+    span {
+      display: inline-block;
+      font-weight: 500;
+      color: $mainColor;
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+    a {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+      }
+    }
+    @media (max-width: 600px) {
+      padding: 0;
+    }
+  }
+
+  &__social {
+    @media (max-width: 600px) {
+      margin: rem(15) 0;
+    }
+  }
+
+  &__dev {
+  }
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 990px) {
+    justify-content: flex-start;
+  }
+  &__link {
+    margin: 0 rem(7.5);
+  }
+}
+.dev {
+  display: flex;
+  align-items: center;
+  &__text {
+    font-weight: 400;
+    line-height: math.div(26, 20);
+    color: #bebebe;
+    padding: 0px rem(9) 0px 0px;
+  }
+}
+
+//====================================================================================================

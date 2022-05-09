@@ -1,0 +1,46 @@
+//====================================================================================================
+.page {
+  display: flex;
+  flex-direction: column;
+}
+.home-background {
+  position: relative;
+  &__image-ibg {
+    // padding-bottom: percent(341,1920);
+    padding: 0px 0px percent(341, 1920) 0px;
+  }
+}
+.works {
+  &__container {
+  }
+
+  &__header {
+  }
+
+  &__title {
+  }
+
+  &__link {
+  }
+
+  &__items {
+  }
+
+  &__column {
+    &_left {
+    }
+  }
+
+  &__item {
+  }
+}
+.work-ibg {
+}
+.work {
+  &__image {
+  }
+}
+.image {
+}
+
+//====================================================================================================
