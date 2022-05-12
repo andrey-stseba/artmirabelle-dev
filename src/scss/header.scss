@@ -44,6 +44,7 @@
   &__item {
     min-width: rem(160);
     text-align: center;
+    position: relative;
   }
 
   &__link {
@@ -51,7 +52,18 @@
     line-height: math.div(25, 20);
     text-align: center;
     &._active {
-      border-bottom: 9px solid #e59e38;
+      // border-bottom: 9px solid #e59e38;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        background-color: #e59e38;
+        border-radius: 50%;
+        bottom: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
   &__link:hover {
