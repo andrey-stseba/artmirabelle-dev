@@ -1,7 +1,7 @@
 //====================================================================================================
 .header {
   &__container {
-    padding: 34px 0px;
+    padding: rem(34) 0 rem(45) 0;
     margin: 0 auto;
     @media (min-width: $mobile) {
       display: flex;
@@ -13,6 +13,7 @@
   &__logo {
     display: flex;
     justify-content: center;
+    margin-left: rem(44);
   }
 
   &__menu {
@@ -32,23 +33,37 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: rem(80);
     row-gap: rem(20);
-    padding: rem(110) 0 rem(27) rem(30);
+    padding: rem(111) 0 rem(27) 0;
     @media (max-width: $mobile) {
       justify-content: center;
       padding: rem(30) 0;
-      column-gap: rem(10);
     }
   }
 
   &__item {
+    min-width: rem(160);
+    text-align: center;
   }
 
   &__link {
-    font-weight: 600;
-    line-height: math.div(20, 20);
+    font-family: ZwoWebPro;
+    line-height: math.div(25, 20);
     text-align: center;
+    &._active {
+      border-bottom: 9px solid #e59e38;
+    }
+  }
+  &__link:hover {
+    background: linear-gradient(
+      180deg,
+      #000000 -14.37%,
+      rgba(173, 123, 255, 0.78) 145%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: rgba(173, 123, 255, 0.78);
   }
 }
 .icon-menu {
