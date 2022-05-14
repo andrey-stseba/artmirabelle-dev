@@ -52,7 +52,6 @@
     line-height: math.div(25, 20);
     text-align: center;
     &._active {
-      // border-bottom: 9px solid #e59e38;
       &::after {
         content: '';
         position: absolute;
