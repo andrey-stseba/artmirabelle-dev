@@ -14,6 +14,15 @@
     display: flex;
     justify-content: center;
     margin-left: rem(44);
+    @media (max-width: $tablet) {
+      margin-left: rem(22);
+    }
+    @media (max-width: $mobile) {
+      margin-left: 0;
+    }
+    @media (max-width: $mobileSmall) {
+      display: none;
+    }
   }
 
   &__menu {
@@ -39,18 +48,28 @@
       justify-content: center;
       padding: rem(30) 0;
     }
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
   &__item {
     min-width: rem(160);
     text-align: center;
     position: relative;
+    @media (max-width: $tablet) {
+      min-width: rem(100);
+    }
   }
 
   &__link {
     font-family: ZwoWebPro;
     line-height: math.div(25, 20);
     text-align: center;
+    @media (max-width: $mobileSmall) {
+      font-size: rem(30);
+    }
     &._active {
       &::after {
         content: '';
