@@ -13,12 +13,14 @@
 // ==================================================================================
 .works {
   &__container {
-    padding: 0px rem(70);
   }
 
   &__header {
     display: flex;
     margin-bottom: 20px;
+  }
+
+  &__filter {
   }
 
   &__title {
@@ -38,7 +40,11 @@
 
   &__items {
     display: flex;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
     gap: rem(44);
+    padding: 0px rem(70);
   }
 
   &__column {
@@ -46,6 +52,9 @@
     flex: 0 1 50%;
     &_left {
       margin-top: 2.75rem;
+    }
+    @media (max-width: $tablet) {
+      flex: 0 1 100%;
     }
   }
 
@@ -67,6 +76,61 @@
     }
   }
 }
+.filter-works {
+  padding-left: rem(113);
+  position: relative;
+  display: flex;
+  &__item {
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: rem(27);
+    line-height: math.div(35, 27);
+    text-align: center;
+    text-decoration-line: underline;
+    color: #444256;
+    margin-bottom: rem(13);
+    span {
+      padding-right: rem(17);
+    }
+
+    &._spoller-active img {
+      transform: rotate(-180deg);
+    }
+    img {
+      transition: transform 0.3s ease 0s;
+    }
+  }
+
+  &__list {
+    padding: rem(15) rem(25);
+    position: absolute;
+    top: 100%;
+    left: rem(113);
+    z-index: 2;
+    min-width: rem(227);
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(40, 33, 99, 0.15);
+    border-radius: 4px;
+  }
+
+  &__categoriya {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: math.div(23, 18);
+    text-align: center;
+    color: #716f85;
+    &:not(:last-child) {
+      margin-bottom: rem(9);
+      padding-bottom: rem(9);
+      border-bottom: 1px solid rgba(113, 111, 133, 0.16);
+    }
+  }
+}
 .work-ibg {
   padding-bottom: 78.1976744186%;
   width: 100%;
@@ -84,12 +148,36 @@
     bottom: 35px;
     left: 31px;
     font-weight: 600;
-    font-size: 50px;
-    line-height: 64px;
+    font-size: rem(50);
+    line-height: math.div(64, 50);
     opacity: 0;
     transition: 0.5s ease;
     color: #ffffff;
     z-index: 2;
+    @media (max-width: $pc) {
+      font-size: rem(30);
+      line-height: math.div(44, 30);
+    }
+    @media (max-width: $tablet) {
+      font-size: rem(50);
+      line-height: math.div(64, 50);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(34);
+      line-height: math.div(44, 34);
+    }
+    @media (max-width: em(560)) {
+      font-size: rem(28);
+      line-height: math.div(35, 28);
+    }
+    @media (max-width: em(480)) {
+      font-size: rem(22);
+      line-height: math.div(24, 22);
+    }
+    @media (max-width: em(420)) {
+      font-size: rem(16);
+      line-height: math.div(20, 16);
+    }
   }
 }
 .image {

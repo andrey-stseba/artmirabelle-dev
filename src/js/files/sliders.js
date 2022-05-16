@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper'
+import Swiper, { Navigation, Pagination, Autoplay, Thumbs } from 'swiper'
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -19,51 +19,79 @@ EffectFade, Lazy, Manipulation
 // Базовые стили
 import '../../scss/base/swiper.scss'
 // Полный набор стилей из scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+// import '../../scss/libs/swiper.scss'
 // Полный набор стилей из node_modules
 // import 'swiper/css';
 
+// Добавление классов слайдерам
+// swiper главному блоку, swiper-wrapper оболочке, swiper-slide для слайдов
+function bildSliders () {
+  //BildSlider
+  let sliders = document.querySelectorAll(
+    '[class*="__swiper"]:not(.swiper-wrapper)'
+  )
+  if (sliders) {
+    sliders.forEach(slider => {
+      slider.parentElement.classList.add('swiper')
+      slider.classList.add('swiper-wrapper')
+      for (const slide of slider.children) {
+        slide.classList.add('swiper-slide')
+      }
+    })
+  }
+}
 // Инициализация слайдеров
 function initSliders () {
+  // Добавление классов слайдера
+  // при необходимости отключить
+  bildSliders()
   // Перечень слайдеров
   // Проверяем, есть ли слайдер на стронице
-  if (document.querySelector('.works__swiper')) {
+  if (document.querySelector('.works__slider')) {
     // Указываем скласс нужного слайдера
     // Создаем слайдер
-    new Swiper('.works__swiper', {
+    new Swiper('.works__slider', {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation],
+      modules: [Navigation, Pagination, Autoplay],
       observer: true,
       observeParents: true,
-      slidesPerView: 2,
-      spaceBetween: 10,
-      autoHeight: true,
+      slidesPerView: 1,
+      spaceBetween: 5,
+      // autoHeight: true,
       speed: 800,
 
       //touchRatio: 0,
       //simulateTouch: false,
-      //loop: true,
+      loop: true,
       //preloadImages: false,
       //lazy: true,
 
       /*
 			// Эффекты
 			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
 			*/
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false
+      // },
 
       // Пагинация
-      /*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
+      /**/
+      pagination: {
+        el: '.swiper-pagination',
+        renderBullet: function (index, className) {
+          return (
+            '<span class="' +
+            className +
+            '"><span>' +
+            (index + 1) +
+            '</span></span>'
+          )
+        },
+        clickable: true
+      },
 
       // Скроллбар
       /*
