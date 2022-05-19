@@ -1,30 +1,28 @@
 //====================================================================================================
 .header {
+  @include adaptiveValue('padding-right', 70, 90, 1700, 767.98);
+  @include adaptiveValue('padding-left', 70, 90, 1700, 767.98);
   &__container {
     padding: rem(34) 0 rem(58) 0;
-    margin: 0 auto;
-    @media (min-width: $mobile) {
+    @include adaptiveValue('padding-top', 34, 15, 1920);
+    @include adaptiveValue('padding-bottom', 58, 25, 1920);
+    @media (min-width: $mobileSmall) {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
   }
 
-  &__logo {
-    display: flex;
-    justify-content: center;
-    margin-left: rem(44);
-    @media (max-width: $tablet) {
-      margin-left: rem(22);
-    }
-    @media (max-width: $mobile) {
-      margin-left: 0;
-    }
+  &__logo-ibg {
+    width: 11%;
+    padding-bottom: 11%;
     @media (max-width: $mobileSmall) {
       display: none;
     }
   }
-
+  @media (max-width: $mobile) {
+    padding: 0 rem(20);
+  }
   &__menu {
   }
 }
@@ -43,7 +41,9 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: rem(20);
-    padding: rem(111) 0 rem(27) 0;
+    @include adaptiveValue('padding-top', 111, 40, 1920);
+    @include adaptiveValue('padding-bottom', 27, 15, 1920);
+
     @media (max-width: $mobile) {
       justify-content: center;
       padding: rem(30) 0;
@@ -55,18 +55,16 @@
   }
 
   &__item {
-    min-width: rem(160);
+    @include adaptiveValue('min-width', 160, 60, 1920);
     text-align: center;
     position: relative;
-    @media (max-width: $tablet) {
-      min-width: rem(100);
-    }
   }
 
   &__link {
     font-family: ZwoWebPro;
     line-height: math.div(25, 20);
     text-align: center;
+    @include adaptiveValue('font-size', 20, 16, 1920);
     @media (max-width: $mobileSmall) {
       font-size: rem(30);
     }
