@@ -6,7 +6,6 @@
 .home-background {
   position: relative;
   &__image-ibg {
-    // padding-bottom: percent(341,1920);
     padding: 0px 0px percent(341, 1920) 0px;
   }
 }
@@ -41,9 +40,12 @@
 
   &__items {
     display: flex;
-    @include adaptiveValue('padding-right', 70, 180, 1920);
-    @include adaptiveValue('padding-left', 70, 180, 1920);
+    padding: 0 rem(70);
     gap: rem(44);
+    @media (max-width: em(1918)) {
+      @include adaptiveValue('padding-right', 110, 180);
+      @include adaptiveValue('padding-left', 110, 180);
+    }
     @media (max-width: $mobile) {
       flex-direction: column;
       padding: 0px rem(20);
@@ -80,9 +82,12 @@
   }
 }
 .filter-works {
-  padding-left: rem(113);
+  padding-left: rem(143);
   position: relative;
   display: flex;
+  @media (max-width: $tablet) {
+    padding-left: rem(163);
+  }
   @media (max-width: $mobile) {
     padding-left: rem(83);
   }
@@ -118,12 +123,15 @@
     padding: rem(15) rem(25);
     position: absolute;
     top: 100%;
-    left: rem(113);
+    left: rem(143);
     z-index: 2;
     min-width: rem(227);
     background: #ffffff;
     box-shadow: 0px 4px 10px rgba(40, 33, 99, 0.15);
     border-radius: 4px;
+    @media (max-width: $tablet) {
+      left: rem(163);
+    }
     @media (max-width: $mobile) {
       left: rem(83);
     }

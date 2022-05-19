@@ -1,7 +1,7 @@
 //====================================================================================================
 .header {
-  @include adaptiveValue('padding-right', 70, 90, 1700, 767.98);
-  @include adaptiveValue('padding-left', 70, 90, 1700, 767.98);
+  @include adaptiveValue('padding-right', 70, 100, 1700, 767.98);
+  @include adaptiveValue('padding-left', 70, 100, 1700, 767.98);
   &__container {
     padding: rem(34) 0 rem(58) 0;
     @include adaptiveValue('padding-top', 34, 15, 1920);
