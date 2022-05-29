@@ -1,0 +1,26 @@
+.project-page {
+  display: flex;
+  flex-direction: column;
+  &__container {
+  }
+
+  &__header {
+  }
+
+  &__title {
+  }
+
+  &__body {
+  }
+
+  &__image-ibg {
+    padding: 0px 0px percent(800, 1420) 0px;
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: rem(44);
+    }
+  }
+
+  &__text {
+  }
+}
