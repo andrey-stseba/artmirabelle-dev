@@ -93,4 +93,10 @@
   }
 }
 .team-button {
+  font-weight: 600;
+  font-size: rem(36);
+  line-height: math.div(46, 36);
+  color: #e59e38;
+  border: 3px solid #e59e38;
+  border-radius: 10px;
 }
