@@ -13,6 +13,15 @@
 
   &__button-box {
     text-align: center;
+    margin: rem(140) 0px rem(320) 0px;
+    margin-bottom: rem(320);
+    padding: 0 rem(15);
+    @media (max-width: $tablet) {
+      margin: rem(90) 0px rem(180) 0px;
+    }
+    @media (max-width: $mobileSmall) {
+      margin: rem(70) 0px rem(100) 0px;
+    }
   }
 }
 .header-team {
@@ -21,6 +30,11 @@
     font-size: rem(90);
     line-height: math.div(115, 90);
     color: #5d4ed1;
+    padding: 0 rem(15);
+    @media (max-width: $mobile) {
+      font-size: rem(70);
+      line-height: math.div(92, 70);
+    }
   }
 
   &__text {
@@ -28,34 +42,50 @@
     font-size: rem(36);
     line-height: math.div(46, 36);
     color: #c5c4d0;
+    padding: 0 rem(15);
+    @media (max-width: $mobile) {
+      font-size: rem(28);
+      line-height: math.div(36, 28);
+    }
   }
 }
 .body-team {
   &__cards {
     display: flex;
-    justify-content: space-between;
+    @include adaptiveValue('gap', 110, 60);
     gap: rem(110);
+    @media (max-width: rem(1024)) {
+      flex-direction: column;
+    }
   }
 
   &__card {
-    max-width: rem(420);
     display: flex;
     flex-direction: column;
     text-align: center;
+    flex: 0 1 33.33%;
   }
 }
 
 .card-team {
   &__image-box {
     margin-bottom: rem(40);
+    display: flex;
+    justify-content: center;
+    flex: 0 1 auto;
   }
 
-  &__image-ibg {
-    padding-bottom: rem(248);
-    max-width: rem(248);
-    left: 20%;
+  &__image {
+    flex: 0 0 rem(248);
+    height: rem(248);
+    border-radius: 50%;
+    overflow: hidden;
     img {
-      border-radius: 50%;
+      max-width: 100%;
+    }
+    @media (max-width: $mobileSmall) {
+      flex: 0 0 rem(170);
+      height: rem(170);
     }
   }
 
@@ -63,6 +93,11 @@
     font-weight: 450;
     font-size: rem(30);
     line-height: math.div(38, 30);
+    margin-top: auto;
+    @media (max-width: $mobileSmall) {
+      font-size: rem(24);
+      line-height: math.div(28, 24);
+    }
   }
 
   &__position {
@@ -70,6 +105,10 @@
     font-size: rem(30);
     line-height: math.div(38, 30);
     color: #5d4ed1;
+    @media (max-width: $mobileSmall) {
+      font-size: rem(24);
+      line-height: math.div(28, 24);
+    }
   }
 
   &__text {
@@ -79,6 +118,10 @@
     color: #939393;
     &:not(:last-child) {
       margin-bottom: rem(40);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(24);
+      line-height: math.div(28, 24);
     }
   }
 
@@ -99,4 +142,9 @@
   color: #e59e38;
   border: 3px solid #e59e38;
   border-radius: 10px;
+  padding: rem(10) rem(40);
+  @media (max-width: $mobileSmall) {
+    font-size: rem(24);
+    line-height: math.div(32, 24);
+  }
 }
