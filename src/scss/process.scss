@@ -71,16 +71,20 @@
 
   &__list {
     display: flex;
-    padding: 0 rem(50);
+    margin: 0 0 0 rem(80);
     gap: rem(100);
   }
 
   &__col-list {
+    p {
+      font-weight: 600;
+    }
   }
 
   &__item {
+    list-style-type: disc;
     &:not(:last-child) {
-      list-style-type: disc;
+      margin-bottom: rem(34);
     }
   }
 }
