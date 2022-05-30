@@ -4,11 +4,11 @@
 
   &__header {
     text-align: center;
-    padding: rem(80) 0px rem(140) 0px;
+    padding: rem(80) rem(15);
   }
 
   &__body {
-    padding: 0px rem(46) 0px rem(46);
+    padding: 0px rem(100);
   }
 
   &__button-box {
@@ -30,7 +30,7 @@
     font-size: rem(90);
     line-height: math.div(115, 90);
     color: #5d4ed1;
-    padding: 0 rem(15);
+
     @media (max-width: $mobile) {
       font-size: rem(70);
       line-height: math.div(92, 70);
@@ -42,14 +42,47 @@
     font-size: rem(36);
     line-height: math.div(46, 36);
     color: #c5c4d0;
-    padding: 0 rem(15);
     @media (max-width: $mobile) {
       font-size: rem(28);
       line-height: math.div(36, 28);
     }
   }
 }
+
 .body-process {
+  font-weight: 400;
+  font-size: rem(33);
+  line-height: math.div(42, 33);
+  color: #666285;
+
+  &__text {
+    margin-bottom: rem(20);
+    span {
+      color: #e59e38;
+      font-weight: 600;
+      font-size: rem(42);
+      line-height: math.div(54, 42);
+    }
+  }
+
+  &__title-list {
+    margin-bottom: rem(20);
+  }
+
+  &__list {
+    display: flex;
+    padding: 0 rem(50);
+    gap: rem(100);
+  }
+
+  &__col-list {
+  }
+
+  &__item {
+    &:not(:last-child) {
+      list-style-type: disc;
+    }
+  }
 }
 
 .process-button {
