@@ -1,0 +1,67 @@
+.process {
+  &__container {
+  }
+
+  &__header {
+    text-align: center;
+    padding: rem(80) 0px rem(140) 0px;
+  }
+
+  &__body {
+    padding: 0px rem(46) 0px rem(46);
+  }
+
+  &__button-box {
+    text-align: center;
+    margin: rem(140) 0px rem(320) 0px;
+    margin-bottom: rem(320);
+    padding: 0 rem(15);
+    @media (max-width: $tablet) {
+      margin: rem(90) 0px rem(180) 0px;
+    }
+    @media (max-width: $mobileSmall) {
+      margin: rem(70) 0px rem(100) 0px;
+    }
+  }
+}
+.header-process {
+  &__title {
+    font-weight: 450;
+    font-size: rem(90);
+    line-height: math.div(115, 90);
+    color: #5d4ed1;
+    padding: 0 rem(15);
+    @media (max-width: $mobile) {
+      font-size: rem(70);
+      line-height: math.div(92, 70);
+    }
+  }
+
+  &__text {
+    font-weight: 450;
+    font-size: rem(36);
+    line-height: math.div(46, 36);
+    color: #c5c4d0;
+    padding: 0 rem(15);
+    @media (max-width: $mobile) {
+      font-size: rem(28);
+      line-height: math.div(36, 28);
+    }
+  }
+}
+.body-process {
+}
+
+.process-button {
+  font-weight: 600;
+  font-size: rem(36);
+  line-height: math.div(46, 36);
+  color: #ffffff;
+  background-color: #e59e38;
+  border-radius: 10px;
+  padding: rem(10) rem(40);
+  @media (max-width: $mobileSmall) {
+    font-size: rem(24);
+    line-height: math.div(32, 24);
+  }
+}
