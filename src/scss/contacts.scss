@@ -1,0 +1,53 @@
+.cotacts {
+  &__container {
+  }
+
+  &__header {
+    text-align: center;
+    padding: rem(80) rem(15);
+  }
+}
+.header-cotacts {
+  &__title {
+    font-weight: 450;
+    font-size: rem(90);
+    line-height: math.div(115, 90);
+    color: #5d4ed1;
+
+    @media (max-width: $mobile) {
+      font-size: rem(50);
+      line-height: math.div(76, 50);
+    }
+  }
+
+  &__text {
+    font-weight: 450;
+    font-size: rem(36);
+    line-height: math.div(46, 36);
+    color: #c5c4d0;
+    @media (max-width: $mobile) {
+      font-size: rem(28);
+      line-height: math.div(36, 28);
+    }
+  }
+}
+.contacts-form {
+}
+.form-contacts {
+  &__body {
+    @include adaptiveValue('font-size', 30, 16);
+    line-height: math.div(38, 30);
+  }
+
+  &__label {
+  }
+
+  &__line {
+  }
+
+  &__button {
+  }
+}
+.form-contacts-input {
+  color: #c1c1c1;
+}

@@ -5,194 +5,66 @@
     <div class="wrapper">
       <main class="page">
         @@include('html/_header.htm',{})
-        <section class="works">
-          <div class="works__container">
-            <div class="works__header">
-              <h2 class="works__title">
-                <button>
-                  <a href="" class="works__link">Let’s work with us!</a>
-                </button>
-              </h2>
-              <!-- <a href="" class="works__view-all">View all</a> -->
+        <section class="cotacts">
+          <div class="cotacts__container">
+            <div class="cotacts__header header-cotacts">
+              <h2 class="header-cotacts__title">Contacts</h2>
+              <p class="header-cotacts__text">
+                You can send us a Brief, a review or an offer of cooperation by
+                filling out this form!
+              </p>
             </div>
-            <div data-spollers class="works__filter filter-works">
-              <div class="filter-works__item">
-                <button type="button" data-spoller class="filter-works__title">
-                  <span>Filter</span>
-                  <img src="@img/works/icons/icon.svg" alt="button" />
+            <div class="contacts-form form-contacts">
+              <form action="#" class="form-contacts__body">
+                <label for="form-contacts-name" class="form-contacts__label">
+                  Name*
+                </label>
+                <div class="form-contacts__line">
+                  <input
+                    id="form-contacts-name"
+                    autocomplete="off"
+                    type="text"
+                    name="form[]"
+                    data-error="Please enter your Name: Andrey"
+                    data-required="name"
+                    placeholder="Your name..."
+                    class="form-contacts-input"
+                  />
+                </div>
+                <label for="form-contacts-email" class="form-contacts__label">
+                  Email Address*
+                </label>
+                <div class="form-contacts__line">
+                  <input
+                    id="form-contacts-email"
+                    autocomplete="off"
+                    type="text"
+                    name="form[]"
+                    data-error="Please input your email: adrey@gmail.com"
+                    data-required="email"
+                    placeholder="Your Email Address..."
+                    class="form-contacts-input"
+                  />
+                </div>
+                <label for="form-contacts-message" class="form-contacts__label">
+                  Message*
+                </label>
+                <div class="form-contacts__line">
+                  <input
+                    id="form-contacts-message"
+                    autocomplete="off"
+                    type=""
+                    name="form[]"
+                    data-error="Please input your message"
+                    data-required="message"
+                    placeholder="Your message..."
+                    class="form-contacts-input"
+                  />
+                </div>
+                <button type="submit" class="form-contacts__button">
+                  Submit
                 </button>
-                <ul class="filter-works__list">
-                  <li class="filter-works__categoriya">Graphic elements</li>
-                  <li class="filter-works__categoriya">Motion design</li>
-                  <li class="filter-works__categoriya">Print design</li>
-                  <li class="filter-works__categoriya">UI design</li>
-                </ul>
-              </div>
-            </div>
-            <div class="works__slider">
-              <div class="works__swiper">
-                <div class="works__slide">
-                  <div class="works__items">
-                    <div class="works__column  works__column_left">
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                    </div>
-                    <div class="works__column">
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="works__slide">
-                  <div class="works__items">
-                    <div class="works__column  works__column_left">
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                    </div>
-                    <div class="works__column">
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="works__slide">
-                  <div class="works__items">
-                    <div class="works__column  works__column_left">
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                    </div>
-                    <div class="works__column">
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="works__slide">
-                  <div class="works__items">
-                    <div class="works__column  works__column_left">
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                    </div>
-                    <div class="works__column">
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                      <a href="" class="works__item work-ibg work">
-                        <h3 class="work__title">Project Name Write Here</h3>
-                        <img
-                          class="work__image image"
-                          src="@img/works/01.jpg"
-                          alt="logo"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
+              </form>
             </div>
           </div>
         </section>
