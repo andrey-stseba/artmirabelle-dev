@@ -9,6 +9,12 @@
 
   &__body {
     padding: 0px rem(100);
+    @media (max-width: $tablet) {
+      padding: 0px rem(50);
+    }
+    @media (max-width: $mobile) {
+      padding: 0px rem(15);
+    }
   }
 
   &__button-box {
@@ -20,7 +26,7 @@
       margin: rem(90) 0px rem(180) 0px;
     }
     @media (max-width: $mobileSmall) {
-      margin: rem(70) 0px rem(100) 0px;
+      margin: rem(50) 0px;
     }
   }
 }
@@ -32,8 +38,8 @@
     color: #5d4ed1;
 
     @media (max-width: $mobile) {
-      font-size: rem(70);
-      line-height: math.div(92, 70);
+      font-size: rem(50);
+      line-height: math.div(76, 50);
     }
   }
 
@@ -51,7 +57,8 @@
 
 .body-process {
   font-weight: 400;
-  font-size: rem(33);
+  // font-size: rem(33);
+  @include adaptiveValue('font-size', 33, 18);
   line-height: math.div(42, 33);
   color: #666285;
 
@@ -60,7 +67,7 @@
     span {
       color: #e59e38;
       font-weight: 600;
-      font-size: rem(42);
+      @include adaptiveValue('font-size', 42, 28);
       line-height: math.div(54, 42);
     }
   }
@@ -73,6 +80,14 @@
     display: flex;
     margin: 0 0 0 rem(80);
     gap: rem(100);
+    @media (max-width: em(520)) {
+      margin: 0 0 0 rem(40);
+      gap: rem(50);
+    }
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      gap: rem(24);
+    }
   }
 
   &__col-list {
@@ -85,6 +100,11 @@
     list-style-type: disc;
     &:not(:last-child) {
       margin-bottom: rem(34);
+    }
+    @media (max-width: $mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(14);
+      }
     }
   }
 }
