@@ -1,6 +1,13 @@
 .cotacts {
   margin-bottom: rem(430);
+  @media (max-width: $pc) {
+    margin-bottom: rem(230);
+  }
+  @media (max-width: $mobile) {
+    margin-bottom: rem(130);
+  }
   &__container {
+    padding: 0px rem(15);
   }
 
   &__header {
@@ -38,6 +45,9 @@
   max-width: rem(732);
   margin: 0 auto;
   &__body {
+    & * {
+      outline: none;
+    }
     @include adaptiveValue('font-size', 30, 16);
     line-height: math.div(38, 30);
   }
@@ -66,8 +76,8 @@
     padding: rem(18) rem(98);
     background-color: #5d4ed1;
     font-weight: 600;
-    font-size: 35px;
-    line-height: 45px;
+    @include adaptiveValue('font-size', 35, 25);
+    line-height: math.div(45, 35);
     text-align: center;
     color: #f4f3ff;
   }
@@ -80,11 +90,11 @@
   border-radius: 3px;
   padding: rem(10) rem(20);
   width: 100%;
-}
-
-input:active,
-:hover,
-:focus {
-  outline: 0;
-  outline-offset: 0;
+  transition: all 0.5s ease 0s;
+  &::placeholder {
+    color: inherit;
+  }
+  &:focus {
+    box-shadow: 0 0 10px #5d4ed1;
+  }
 }
