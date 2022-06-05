@@ -1,4 +1,5 @@
 .cotacts {
+  margin-bottom: rem(430);
   &__container {
   }
 
@@ -34,20 +35,56 @@
 .contacts-form {
 }
 .form-contacts {
+  max-width: rem(732);
+  margin: 0 auto;
   &__body {
     @include adaptiveValue('font-size', 30, 16);
     line-height: math.div(38, 30);
   }
 
   &__label {
+    margin: 0px 0px rem(14) 0px;
+    display: inline-block;
   }
 
   &__line {
+    &:not(:last-child) {
+      margin-bottom: rem(47);
+    }
+    & textarea {
+      min-height: rem(195);
+      resize: vertical;
+    }
+  }
+}
+.form-contacts {
+  &__box-button {
+    display: flex;
   }
 
   &__button {
+    padding: rem(18) rem(98);
+    background-color: #5d4ed1;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+    color: #f4f3ff;
   }
 }
+
 .form-contacts-input {
   color: #c1c1c1;
+  height: rem(60);
+  border: 1px solid #c1c1c1;
+  border-radius: 3px;
+  padding: rem(10) rem(20);
+  width: 100%;
+}
+
+input:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
 }
